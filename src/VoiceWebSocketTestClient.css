@@ -1,0 +1,245 @@
+.voice-test-client {
+    font-family: Arial, sans-serif;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .status {
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .status.connected {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .status.disconnected {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  
+  .status.recording {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  button.recording {
+    background-color: #dc3545;
+    animation: pulse 1s infinite;
+  }
+  
+  button.success {
+    background-color: #28a745;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .log-container {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 15px;
+    height: 400px;
+    overflow-y: auto;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+  }
+  
+  .log-entry {
+    margin: 2px 0;
+    padding: 2px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .log-entry.sent {
+    color: #007bff;
+  }
+  
+  .log-entry.received {
+    color: #28a745;
+  }
+  
+  .log-entry.error {
+    color: #dc3545;
+  }
+  
+  .log-entry.transcript {
+    color: #6f42c1;
+    font-weight: bold;
+  }
+  
+  .log-entry.debug {
+    color: #6c757d;
+    font-style: italic;
+  }
+  
+  .response-container {
+    background-color: #e7f3ff;
+    border: 1px solid #b3d9ff;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .response-field {
+    margin: 5px 0;
+    font-family: "Courier New", monospace;
+  }
+  
+  .response-field strong {
+    color: #333;
+  }
+  
+  .audio-data {
+    max-height: 100px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    padding: 5px;
+    border-radius: 3px;
+    word-break: break-all;
+    font-size: 10px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .validation-summary {
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .validation-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .validation-item.pass {
+    background-color: #d4edda;
+    border-left: 4px solid #28a745;
+  }
+  
+  .validation-item.fail {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+  }
+  
+  .validation-item.pending {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+  }
+  
+  .test-section {
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+  }
+  
+  .test-section h3 {
+    margin-top: 0;
+    color: #495057;
+  }
+  
+  .debug-info {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+  }
+  
+  .rate-limit-info {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .grid,
+    .grid-3 {
+      grid-template-columns: 1fr;
+    }
+  }
+  
