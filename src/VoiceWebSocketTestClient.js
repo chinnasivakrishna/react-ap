@@ -559,8 +559,8 @@ const VoiceWebSocketTestClient = () => {
     const validations = [
       { key: "connection", label: "WebSocket Connection" },
       { key: "sessionId", label: "Session ID Management (UUID)" },
-      { key: "deepgram", label: "Deepgram Transcription" },
-      { key: "lmntFormat", label: "LMNT Synthesis JSON Format" },
+      { key: "deepgram", label: "STT Transcription" },
+      { key: "lmntFormat", label: "TTS Synthesis JSON Format" },
       { key: "audioFormat", label: "Audio Format (8000Hz, 1ch, 16bit)" },
       { key: "base64Encoding", label: "Base64 Audio Encoding" },
       { key: "rateLimiting", label: "Rate Limiting Compliance" },
@@ -586,7 +586,7 @@ const VoiceWebSocketTestClient = () => {
     <div className="voice-test-client">
       <h1>🎤 Rate-Limited Voice WebSocket Test Client</h1>
       <p>
-        <strong>Testing Deepgram (Speech-to-Text) + LMNT (Text-to-Speech) Integration with Rate Limiting</strong>
+        <strong>Testing STT (Speech-to-Text) + TTS (Text-to-Speech) Integration with Rate Limiting</strong>
       </p>
 
       <div className="container">
@@ -700,7 +700,7 @@ const VoiceWebSocketTestClient = () => {
         {/* Deepgram Testing */}
         <div className="container">
           <div className="test-section">
-            <h3>🎙️ Deepgram Speech-to-Text (Rate Limited)</h3>
+            <h3>🎙️ STT Speech-to-Text (Rate Limited)</h3>
             <button className={isRecording ? "recording" : ""} onClick={toggleRecording}>
               {isRecording ? "Stop Recording" : "Start Recording"}
             </button>
@@ -722,7 +722,7 @@ const VoiceWebSocketTestClient = () => {
         {/* LMNT Testing */}
         <div className="container">
           <div className="test-section">
-            <h3>🔊 LMNT Text-to-Speech</h3>
+            <h3>🔊 TTS Text-to-Speech</h3>
             <textarea
               rows="3"
               value={textToSynthesize}
